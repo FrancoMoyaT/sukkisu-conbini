@@ -1,0 +1,446 @@
+/* =========================
+   SUKKISU CONBINI - NEON STYLE
+========================= */
+
+:root {
+    --bg-dark: #140028;
+    --bg-card: rgba(22, 10, 45, 0.85);
+
+    --pink: #ff00c8;
+    --pink-soft: #ff5fd2;
+
+    --blue: #00d9ff;
+    --blue-soft: #63e6ff;
+
+    --purple: #7b2cff;
+
+    --white: #f5f5f5;
+
+    --shadow-pink: 0 0 10px #ff00c8,
+                   0 0 20px #ff00c8,
+                   0 0 40px rgba(255, 0, 200, 0.6);
+
+    --shadow-blue: 0 0 10px #00d9ff,
+                   0 0 20px #00d9ff,
+                   0 0 40px rgba(0, 217, 255, 0.5);
+}
+
+/* =========================
+   GENERAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--white);
+    line-height: 1.7;
+
+    background:
+        radial-gradient(circle at top left, #ff00c860 0%, transparent 30%),
+        radial-gradient(circle at bottom right, #00d9ff55 0%, transparent 30%),
+        linear-gradient(135deg, #170028, #2d0066, #120021);
+
+    background-attachment: fixed;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    background: rgba(10, 0, 25, 0.8);
+    backdrop-filter: blur(10px);
+
+    border-bottom: 2px solid var(--pink);
+
+    box-shadow: var(--shadow-pink);
+
+    padding: 20px 0;
+}
+
+.caja {
+    width: 940px;
+    margin: 0 auto;
+    position: relative;
+}
+
+h1 img {
+    max-width: 180px;
+    filter: drop-shadow(0 0 15px var(--blue));
+}
+
+/* =========================
+   NAV
+========================= */
+
+nav {
+    position: absolute;
+    top: 70px;
+    right: 0;
+}
+
+nav li {
+    display: inline;
+    margin-left: 20px;
+}
+
+nav a {
+    text-transform: uppercase;
+    color: var(--white);
+
+    font-weight: 700;
+    font-size: 20px;
+
+    text-decoration: none;
+    letter-spacing: 2px;
+
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: var(--blue);
+    text-shadow: var(--shadow-blue);
+}
+
+/* =========================
+   BANNER
+========================= */
+
+.banner {
+    width: 100%;
+    display: block;
+
+    border-bottom: 3px solid var(--blue);
+
+    box-shadow: var(--shadow-blue);
+}
+
+/* =========================
+   MAIN
+========================= */
+
+main {
+    background: transparent;
+}
+
+/* =========================
+   TITLES
+========================= */
+
+.titulo-princ {
+    text-align: center;
+
+    font-size: 2.5em;
+    margin-bottom: 1em;
+
+    color: var(--pink);
+
+    text-transform: uppercase;
+    letter-spacing: 4px;
+
+    text-shadow: var(--shadow-pink);
+}
+
+/* =========================
+   PRINCIPAL SECTION
+========================= */
+
+.principal {
+    width: 940px;
+    margin: 0 auto;
+    padding: 4em 0;
+}
+
+.principal p {
+    margin-bottom: 1.5em;
+
+    background: rgba(255,255,255,0.03);
+
+    padding: 20px;
+
+    border-radius: 16px;
+
+    border: 1px solid rgba(255,255,255,0.08);
+
+    backdrop-filter: blur(8px);
+
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+
+/* =========================
+   MAPA
+========================= */
+
+.mapa {
+    padding: 4em 0;
+    text-align: center;
+}
+
+.descmapa {
+    margin-bottom: 2em;
+    color: var(--blue-soft);
+}
+
+.mapacontenido {
+    width: 940px;
+    margin: 0 auto;
+
+    border: 2px solid var(--blue);
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    box-shadow: var(--shadow-blue);
+}
+
+/* =========================
+   PRODUCTOS
+========================= */
+
+.productos {
+    width: 940px;
+    margin: 0 auto;
+    padding: 60px 0;
+}
+
+.productos li {
+    display: inline-block;
+
+    width: 30%;
+    margin: 0 1.5%;
+
+    text-align: center;
+    vertical-align: top;
+
+    padding: 25px;
+
+    border-radius: 20px;
+
+    background: var(--bg-card);
+
+    border: 2px solid rgba(255,255,255,0.1);
+
+    backdrop-filter: blur(12px);
+
+    transition: 0.35s;
+
+    box-shadow:
+        0 0 15px rgba(255,0,200,0.15),
+        0 0 25px rgba(0,217,255,0.15);
+}
+
+.productos li:hover {
+    transform: translateY(-10px) scale(1.02);
+
+    border-color: var(--pink);
+
+    box-shadow:
+        var(--shadow-pink),
+        var(--shadow-blue);
+}
+
+.productos h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+
+    color: var(--pink-soft);
+
+    text-shadow: 0 0 10px var(--pink);
+}
+
+.productos img {
+    width: 100%;
+    border-radius: 14px;
+
+    border: 2px solid rgba(255,255,255,0.08);
+
+    transition: 0.3s;
+}
+
+.productos img:hover {
+    transform: scale(1.03);
+}
+
+.productdescrip {
+    margin-top: 15px;
+    font-size: 18px;
+
+    color: #ddd;
+}
+
+.productprec {
+    margin-top: 10px;
+
+    font-size: 24px;
+    font-weight: bold;
+
+    color: var(--blue);
+
+    text-shadow: var(--shadow-blue);
+}
+
+/* =========================
+   FORM
+========================= */
+
+form {
+    width: 940px;
+    margin: 50px auto;
+
+    padding: 40px;
+
+    background: rgba(10,0,30,0.75);
+
+    border-radius: 20px;
+
+    border: 2px solid rgba(255,255,255,0.08);
+
+    box-shadow:
+        var(--shadow-pink),
+        var(--shadow-blue);
+}
+
+form label,
+form legend {
+    display: block;
+
+    margin-bottom: 10px;
+
+    font-size: 18px;
+    color: var(--blue-soft);
+}
+
+.input-padron,
+textarea {
+    width: 100%;
+
+    margin-bottom: 20px;
+
+    padding: 15px;
+
+    background: rgba(255,255,255,0.05);
+
+    border: 1px solid rgba(255,255,255,0.15);
+
+    border-radius: 10px;
+
+    color: white;
+
+    font-size: 16px;
+
+    transition: 0.3s;
+}
+
+.input-padron:focus,
+textarea:focus {
+    outline: none;
+
+    border-color: var(--pink);
+
+    box-shadow: var(--shadow-pink);
+}
+
+.checkbox {
+    margin: 20px 0;
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+.enviar {
+    width: 100%;
+
+    padding: 18px 0;
+
+    border: none;
+    border-radius: 12px;
+
+    background: linear-gradient(90deg, var(--pink), var(--blue));
+
+    color: white;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    letter-spacing: 2px;
+
+    transition: 0.3s;
+
+    box-shadow:
+        var(--shadow-pink),
+        var(--shadow-blue);
+}
+
+.enviar:hover {
+    transform: scale(1.03);
+    filter: brightness(1.1);
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    text-align: center;
+
+    padding: 40px 0;
+
+    background:
+        linear-gradient(90deg, rgba(255,0,200,0.2), rgba(0,217,255,0.2));
+
+    border-top: 2px solid var(--blue);
+
+    box-shadow: var(--shadow-blue);
+}
+
+.copyright {
+    color: white;
+    font-size: 14px;
+    letter-spacing: 3px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media screen and (max-width: 480px) {
+
+    .caja,
+    .principal,
+    .mapacontenido,
+    .productos,
+    form {
+        width: auto;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    nav {
+        position: static;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    nav li {
+        display: block;
+        margin: 12px 0;
+    }
+
+    .productos li,
+    .enviar {
+        width: 100%;
+        margin-bottom: 25px;
+    }
+}
